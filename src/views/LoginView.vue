@@ -3,42 +3,41 @@
     <div class="login-card">
 
       <div class="login-header">
-        <div class="logo">🔐</div>
-        <h1>Bienvenue</h1>
-        <p>Connectez-vous à votre compte</p>
+        <div class="logo"></div>
+        <h1>Log In</h1>
       </div>
 
       <div v-if="error" class="alert-error">
-        ⚠️ {{ error }}
+        {{ error }}
       </div>
 
       <div class="form-group">
-        <label>Adresse email</label>
+        <label>Email</label>
         <div class="input-wrapper">
-          <span class="input-icon">✉️</span>
+          <span class="input-icon"></span>
           <input
             v-model="email"
             type="email"
-            placeholder="exemple@email.com"
+            placeholder=""
           />
         </div>
       </div>
 
       <div class="form-group">
-        <label>Mot de passe</label>
+        <label>Password</label>
         <div class="input-wrapper">
-          <span class="input-icon">🔒</span>
+          <span class="input-icon"></span>
           <input
             v-model="password"
             type="password"
-            placeholder="••••••••"
+            placeholder=""
           />
         </div>
       </div>
 
       <button @click="login" :disabled="loading" class="btn-login">
         <span v-if="loading" class="spinner"></span>
-        {{ loading ? 'Connexion...' : 'Se connecter' }}
+        {{ loading ? 'Connexion...' : 'Login' }}
       </button>
 
     </div>
