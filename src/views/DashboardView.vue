@@ -53,7 +53,7 @@
             :class="msg.role"
           >
             <div class="message-avatar">
-              {{ msg.role === 'user' ? '' : '🤖' }}
+              {{ msg.role === 'user' ? '' : '' }}
             </div>
             <div class="message-bubble">
               <div v-if="msg.role === 'assistant'" v-html="renderMarkdown(msg.content)"></div>
